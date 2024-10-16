@@ -5,44 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65df373f-6745-4db6-bec3-03103f04865a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/LuckyGuy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Coin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Jokenpo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Lucky.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/OddsOrEvens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/ShortResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_es.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_it.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_pt.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_es.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_it.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_pt.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_es.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_it.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_pt.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_es.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_it.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_pt.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Alphabet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Custom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FlipCoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/OneTwoGo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Play.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/SaySomething.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/ShakeHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feat/play-business",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Aulas/Java/LuckyGuy4J",
     "onboarding.tips.debug.path": "E:/Aulas/Java/LuckyGuy4J/src/main/java/org/magalzim/Main.java"
@@ -88,6 +62,7 @@
       <recent name="E:\Aulas\Java\LuckyGuy4J\src\main\resources\translation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.magalzim.play" />
       <recent name="org.magalzim.model" />
     </key>
   </component>
