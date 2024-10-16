@@ -1,16 +1,17 @@
 package org.magalzim.play;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+
 import org.magalzim.model.Lucky;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Stream;
 
-@Data
+@AllArgsConstructor
 public abstract class FacePlay extends Play {
 
-    protected Locale language = Locale.ENGLISH;
+    protected Locale language;
 
     protected String customLuck(List<String> sides) {
         return sides.get(randomize(sides.size()));

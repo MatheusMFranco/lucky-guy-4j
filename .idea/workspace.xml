@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65df373f-6745-4db6-bec3-03103f04865a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/LuckyGuy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Alphabet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Custom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Dice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FlipCoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/OneTwoGo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Play.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/SaySomething.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/ShakeHand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/LuckyGuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/LuckyGuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FlipCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FlipCoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/OneTwoGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/OneTwoGo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/SaySomething.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/SaySomething.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/ShakeHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/ShakeHand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,8 @@
     "git-widget-placeholder": "feat/play-business",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Aulas/Java/LuckyGuy4J",
-    "onboarding.tips.debug.path": "E:/Aulas/Java/LuckyGuy4J/src/main/java/org/magalzim/Main.java"
+    "onboarding.tips.debug.path": "E:/Aulas/Java/LuckyGuy4J/src/main/java/org/magalzim/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
