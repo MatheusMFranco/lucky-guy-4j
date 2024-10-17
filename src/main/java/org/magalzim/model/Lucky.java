@@ -14,7 +14,7 @@ public interface Lucky {
     }
 
     private String generatePath(String className) {
-        String kebabCaseFolder = className
+        String kebabCaseFolder = this.getClass().getSimpleName()
                 .replaceAll("([a-z])([A-Z]+)", "$1-$2")
                 .toLowerCase();
         return String.format("translations.%s.%sTranslations", kebabCaseFolder, className);

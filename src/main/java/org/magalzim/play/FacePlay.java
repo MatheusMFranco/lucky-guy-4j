@@ -14,6 +14,9 @@ public abstract class FacePlay extends Play {
     protected Locale language;
 
     protected String customLuck(List<String> sides) {
+        if (sides.isEmpty()) {
+            throw new IndexOutOfBoundsException();
+        }
         return sides.get(randomize(sides.size()));
     }
 
