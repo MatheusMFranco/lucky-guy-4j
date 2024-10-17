@@ -11,6 +11,9 @@ public class Custom extends Play {
     }
 
     public String play() {
+        if (list.isEmpty()) {
+            throw new IndexOutOfBoundsException("Index 0 out of bounds for length 0");
+        }
         return list.get(randomize(list.size()));
     }
 }
