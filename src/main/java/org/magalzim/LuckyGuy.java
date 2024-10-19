@@ -24,7 +24,14 @@ import java.util.Locale;
 @Data
 @AllArgsConstructor
 public class LuckyGuy {
-    private static final Locale language = Locale.ENGLISH;
+
+    private Locale language;
+
+    LuckyGuy(){
+        if (language == null) {
+            language = Locale.ENGLISH;
+        }
+    }
 
     /**
      * Plays a binary game, returning either 1 or 2.
