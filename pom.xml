@@ -4,9 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.magalzim</groupId>
+    <groupId>io.github.matheusmfranco</groupId>
     <artifactId>LuckyGuy4J</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>LuckyGuy4J</name>
+    <description>A starter game utility library with various random features</description>
+    <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
@@ -32,9 +37,24 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            <mainClass>io.github.matheusmfranco.LuckyGuy</mainClass>
+                        </manifest>
+                    </archive>
+                    <finalName>LuckyGuy4J</finalName>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 
     <dependencies>
         <dependency>
@@ -61,7 +81,54 @@
             <version>5.14.2</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>3.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.12</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
+        <connection>scm:git:git://github.com/MatheusMFranco/lucky-guy-4j.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/MatheusMFranco/lucky-guy-4j.git</developerConnection>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>MatheusMFranco</id>
+            <name>Matheus Franco</name>
+        </developer>
+    </developers>
 
 </project>

@@ -5,47 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65df373f-6745-4db6-bec3-03103f04865a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/model/LuckyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/AlphabetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/CustomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/DiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/FacePlayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/FlipCoinTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/OneTwoGoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/PlayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/SaySomethingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/magalzim/play/ShakeHandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Lucky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Lucky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Alphabet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Custom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Custom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Play.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_de.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_de.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_fr.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_it.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_it.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/coin/CoinTranslations_pt.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/coin/CoinTranslations_pt.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_de.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_de.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_fr.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_it.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_it.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/jokenpo/JokenpoTranslations_pt.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/jokenpo/JokenpoTranslations_pt.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_de.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_de.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_fr.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_it.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_it.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/odds-or-evens/OddsOrEvensTranslations_pt.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/odds-or-evens/OddsOrEvensTranslations_pt.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_de.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_de.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_fr.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_fr.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_it.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_it.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/short-response/ShortResponseTranslations_pt.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translations/short-response/ShortResponseTranslations_pt.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/LuckyGuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/LuckyGuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/model/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Jokenpo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/model/Jokenpo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/Lucky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/model/Lucky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/OddsOrEvens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/model/OddsOrEvens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/model/ShortResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/model/ShortResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/Alphabet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Custom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/Custom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FacePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/FacePlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/FlipCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/FlipCoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/OneTwoGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/OneTwoGo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/SaySomething.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/SaySomething.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/magalzim/play/ShakeHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/matheusmfranco/play/ShakeHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/LuckyGuyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/LuckyGuyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/model/LuckyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/model/LuckyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/AlphabetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/AlphabetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/CustomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/CustomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/DiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/FacePlayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/FacePlayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/FlipCoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/FlipCoinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/OneTwoGoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/OneTwoGoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/PlayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/PlayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/SaySomethingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/SaySomethingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/magalzim/play/ShakeHandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/matheusmfranco/play/ShakeHandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +64,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LuckyGuy.executor": "Run",
     "JUnit.All in LuckyGuy4J.executor": "Run",
     "JUnit.AlphabetTest.executor": "Debug",
     "JUnit.CustomTest.executor": "Run",
@@ -89,7 +80,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feat/facade",
+    "git-widget-placeholder": "test/facade",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Aulas/Java/LuckyGuy4J",
     "onboarding.tips.debug.path": "E:/Aulas/Java/LuckyGuy4J/src/main/java/org/magalzim/Main.java",
@@ -111,7 +102,20 @@
       <recent name="org.magalzim.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShakeHandTest">
+  <component name="RunManager" selected="Application.LuckyGuy">
+    <configuration name="LuckyGuy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.matheusmfranco.LuckyGuy" />
+      <module name="LuckyGuy4J" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.matheusmfranco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FlipCoinTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LuckyGuy4J" />
       <extension name="coverage">
@@ -123,22 +127,6 @@
       <option name="PACKAGE_NAME" value="org.magalzim.play" />
       <option name="MAIN_CLASS_NAME" value="org.magalzim.play.FlipCoinTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlipCoinTest.testPlayWithDifferentLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LuckyGuy4J" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.magalzim.play.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.magalzim.play" />
-      <option name="MAIN_CLASS_NAME" value="org.magalzim.play.FlipCoinTest" />
-      <option name="METHOD_NAME" value="testPlayWithDifferentLanguage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LuckyGuy" />
         <item itemvalue="JUnit.ShakeHandTest" />
         <item itemvalue="JUnit.SaySomethingTest" />
         <item itemvalue="JUnit.OneTwoGoTest" />
         <item itemvalue="JUnit.FlipCoinTest" />
-        <item itemvalue="JUnit.FlipCoinTest.testPlayWithDifferentLanguage" />
       </list>
     </recent_temporary>
   </component>
