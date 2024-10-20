@@ -1,0 +1,10 @@
+services:
+  lucky-guy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lucky-guy
+    image: lucky-guy-image:1.0
+    restart: unless-stopped
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m
