@@ -120,6 +120,15 @@
                         <param>io.github.matheusmfranco.play.*Test</param>
                     </targetTests>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>mutation-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>mutationCoverage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
