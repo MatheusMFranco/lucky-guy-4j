@@ -9,7 +9,8 @@ public abstract class Play {
     public abstract String play();
 
     protected final Integer randomize(int sides) {
-        if (sides <= 0) {
+        final int MIN_SIDES = 2;
+        if (sides < MIN_SIDES) {
             throw new IllegalArgumentException("Number of sides must be greater than 0");
         }
         return RANDOM.nextInt(sides);

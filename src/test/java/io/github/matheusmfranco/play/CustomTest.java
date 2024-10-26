@@ -18,15 +18,6 @@ class CustomTest {
     }
 
     @Test
-    void testPlayWithSingleElement() {
-        List<String> singleOption = List.of("OnlyOption");
-        Custom custom = new Custom(singleOption);
-
-        String result = custom.play();
-        assertEquals("OnlyOption", result, "The result should be 'OnlyOption' because it's the only element in the list");
-    }
-
-    @Test
     void testPlayWithEmptyListThrowsException() {
         List<String> emptyList = List.of();
         Custom custom = new Custom(emptyList);
