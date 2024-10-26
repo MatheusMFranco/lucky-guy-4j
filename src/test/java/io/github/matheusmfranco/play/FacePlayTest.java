@@ -1,8 +1,8 @@
 package io.github.matheusmfranco.play;
 
+import io.github.matheusmfranco.model.Coin;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import io.github.matheusmfranco.model.LuckyTest;
 
 import java.util.List;
 import java.util.Locale;
@@ -44,16 +44,16 @@ class FacePlayTest {
 
     @Test
     void testToSides_withEnumTranslationInEnglish() {
-        String result = facePlay.toSides(LuckyTest.class);
-        List<String> expectedTranslations = List.of("One", "Two");
+        String result = facePlay.toSides(Coin.class);
+        List<String> expectedTranslations = List.of("Heads", "Tails");
         assertTrue(expectedTranslations.contains(result), "Result should be a translated option from the enum");
     }
 
     @Test
     void testToSides_withEnumTranslationInPortuguese() {
         facePlay = new FacePlayTestImplementation(Locale.of("pt", "BR"));
-        String result = facePlay.toSides(LuckyTest.class);
-        List<String> expectedTranslations = List.of("Um", "Dois");
+        String result = facePlay.toSides(Coin.class);
+        List<String> expectedTranslations = List.of("Cara", "Coroa");
         assertTrue(expectedTranslations.contains(result), "Result should be a translated option from the enum in Portuguese");
     }
 }

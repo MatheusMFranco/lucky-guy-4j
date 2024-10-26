@@ -2,6 +2,9 @@ package io.github.matheusmfranco.play;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayTest {
@@ -28,17 +31,27 @@ class PlayTest {
     }
 
     @Test
-    void testRandomize_withOneSide() {
-        int sides = 1;
-        int result = playTest.randomize(sides);
-        assertEquals(0, result, "Result should always be 0 when there is only 1 side");
-    }
-
-    @Test
-    void testRandomize_withInvalidSides() {
+    void testRandomize_withZeroSides() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             playTest.randomize(0);
         });
         assertEquals("Number of sides must be greater than 0", exception.getMessage());
+    }
+
+    @Test
+    void testRandomize_withNegativeSides() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            playTest.randomize(-5);
+        });
+        assertEquals("Number of sides must be greater than 0", exception.getMessage());
+    }
+
+
+    @Test
+    void testRandomizeReturnsWithinRange() {
+        int sides = 10;
+        int result = playTest.randomize(sides);
+        boolean isWithinRange = result >= 0 && result < sides;
+        assertTrue(isWithinRange);
     }
 }

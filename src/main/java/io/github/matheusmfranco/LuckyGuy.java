@@ -5,8 +5,6 @@ import io.github.matheusmfranco.play.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Locale;
@@ -27,19 +25,10 @@ import java.util.Locale;
 @AllArgsConstructor
 public class LuckyGuy {
 
-    private static final Logger logger = LoggerFactory.getLogger(LuckyGuy.class);
     private Locale language;
 
     LuckyGuy(){
-        if (language == null) {
-            language = Locale.ENGLISH;
-        }
-    }
-
-    public static void main(String[] args) {
-        logger.info("--------------------------");
-        logger.info(" Enjoy using LuckyGuy! 🎲");
-        logger.info("--------------------------");
+        language = Locale.ENGLISH;
     }
 
     /**
@@ -51,15 +40,20 @@ public class LuckyGuy {
     }
 
     /**
-     * Rolls a die with the specified number of sides. Default is 6 sides.
-     * @param sides The number of sides of the dice (default is 6).
+     * Rolls a die with the specified number of sides.
+     * @param sides The number of sides of the dice
      * @return A number representing the outcome of the dice roll.
      */
     public int dice(Integer sides) {
-        if (sides == null) {
-            sides = 6;
-        }
-        return Integer.parseInt(new Dice().play(sides));
+        return Integer.parseInt(new Dice().play(sides)) + 1;
+    }
+
+    /**
+     * Rolls a die with 6 sides.
+     * @return A number representing the outcome of the dice roll.
+     */
+    public int dice() {
+        return Integer.parseInt(new Dice().play(6)) + 1;
     }
 
     /**

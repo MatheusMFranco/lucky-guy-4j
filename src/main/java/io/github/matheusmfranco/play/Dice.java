@@ -6,7 +6,8 @@ public class Dice extends Play {
         if (sides == null || sides <= 0) {
             return play();
         }
-        return Integer.toString(randomize(sides) + 1);
+        int selected = randomize(sides);
+        return Integer.toString(selected);
     }
 
     @Override

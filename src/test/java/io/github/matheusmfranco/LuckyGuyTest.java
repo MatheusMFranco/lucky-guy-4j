@@ -26,7 +26,13 @@ class LuckyGuyTest {
 
     @Test
     void testDice() {
-        int result = luckyGuy.dice(6);
+        int result = luckyGuy.dice(20);
+        assertTrue(result >= 1 && result <= 20);
+    }
+
+    @Test
+    void testDefaultDice() {
+        int result = luckyGuy.dice();
         assertTrue(result >= 1 && result <= 6);
     }
 
@@ -56,8 +62,20 @@ class LuckyGuyTest {
     }
 
     @Test
-    void testOddsAndEvens() {
+    void testOdds() {
         String result = luckyGuy.oddsAndEvens(1, 2);
+        assertEquals("Odd", result);
+    }
+
+    @Test
+    void testEvens() {
+        String result = luckyGuy.oddsAndEvens(1, 3);
+        assertEquals("Even", result);
+    }
+
+    @Test
+    void testOddsAndEvens() {
+        String result = luckyGuy.oddsAndEvens();
         assertTrue(result.equals("Odd") || result.equals("Even"));
     }
 
