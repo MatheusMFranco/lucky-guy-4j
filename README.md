@@ -5,6 +5,7 @@
 [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.matheusmfranco/LuckyGuy4J/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.matheusmfranco/LuckyGuy4J)
 
+
 LuckyGuy4J is a game utility library that includes features such as rolling dice, flipping coins, binary outcomes, custom games, and more.
 
 This library allows you to set a default language and supports multiple languages for game results.
