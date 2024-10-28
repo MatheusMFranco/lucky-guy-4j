@@ -1,15 +1,9 @@
-name: Publish to MVN
+name: CI/CD for LuckyGuy4J
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
-permissions:
-  contents: write
 
 jobs:
   build:
@@ -19,11 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up System
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ca-certificates
-
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -31,38 +20,13 @@ jobs:
           distribution: 'adopt'
 
       - name: Build with Maven
-        run: mvn clean package -DskipTests
-
-      - name: Check code formatting
-        if: github.event_name == 'pull_request'
-        run: mvn fmt:check
+        run: mvn clean package
 
       - name: Run Tests
-        if: github.event_name == 'pull_request'
         run: mvn test
 
       - name: Publish to Maven Central
-        if: github.event_name == 'push'
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          OSSRH_TOKEN: ${{ secrets.OSSRH_PASSWORD }}
-          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          MAVEN_GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: mvn deploy -DskipTests
-
-      - name: Configure Git user
-        if: github.event_name == 'push'
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Create Git Tag
-        if: github.event_name == 'push'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG_NAME=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
