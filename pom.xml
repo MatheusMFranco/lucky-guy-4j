@@ -270,7 +270,7 @@
         <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
         <connection>scm:git:git://github.com/MatheusMFranco/lucky-guy-4j.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MatheusMFranco/lucky-guy-4j.git</developerConnection>
-    </scm>
+  </scm>
 
     <licenses>
         <license>

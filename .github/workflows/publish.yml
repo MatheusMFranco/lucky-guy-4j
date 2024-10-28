@@ -50,9 +50,7 @@ jobs:
           OSSRH_TOKEN: ${{ secrets.OSSRH_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           MAVEN_GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-        run: |
-          mvn release:prepare -DskipTests -DreleaseVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/-SNAPSHOT//') -DdevelopmentVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/[0-9]$/&1-SNAPSHOT/')
-          mvn release:perform -DskipTests
+        run: mvn deploy -DskipTests
 
       - name: Configure Git user
         if: github.event_name == 'push'
