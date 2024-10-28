@@ -183,21 +183,16 @@
 
     <distributionManagement>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/MatheusMFranco/lucky-guy-4j</url>
         </repository>
-        <snapshotRepository>
-            <id>ossrh-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <scm>
         <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
         <connection>scm:git:git://github.com/MatheusMFranco/lucky-guy-4j.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MatheusMFranco/lucky-guy-4j.git</developerConnection>
-    <tag>v1.0.2</tag>
-  </scm>
+    </scm>
 
     <licenses>
         <license>
