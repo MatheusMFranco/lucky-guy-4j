@@ -27,7 +27,9 @@ jobs:
 
       - name: Import GPG key
         run: |
-          echo "${{ secrets.GPG_KEY }}" | gpg --import
+          echo "${{ secrets.GPG_KEY }}" > secret-key.asc
+          gpg --import secret-key.asc
+          rm secret-key.asc
 
       - name: Publish to Maven Central
         env:
