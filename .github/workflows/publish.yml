@@ -25,6 +25,10 @@ jobs:
       - name: Run Tests
         run: mvn test
 
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_KEY }}" | gpg --import
+
       - name: Publish to Maven Central
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
