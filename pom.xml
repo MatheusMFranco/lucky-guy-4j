@@ -82,9 +82,14 @@
                 <version>3.2.0</version>
                 <executions>
                     <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <signer>bc</signer>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
