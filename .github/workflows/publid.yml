@@ -1,12 +1,19 @@
 name: Publish to MVN
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       packages: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -25,14 +32,12 @@ jobs:
         run: mvn test
 
       - name: Publish Package
-        run: mvn --batch-mode deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: mvn deploy
 
       - name: Create Git Tag
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          TAG_NAME=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          TAG_NAME=v$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
           git tag $TAG_NAME
           git push origin $TAG_NAME
