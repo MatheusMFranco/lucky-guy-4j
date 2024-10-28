@@ -40,7 +40,6 @@ jobs:
         run: mvn fmt:check
 
       - name: Publish to Maven Central
-        if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, '[release]')
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -55,7 +54,6 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create Git Tag
-        if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, '[release]')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
