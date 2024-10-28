@@ -170,14 +170,6 @@
                         <goals>
                             <goal>format</goal>
                         </goals>
-                        <phase>validate</phase>
-                    </execution>
-                    <execution>
-                        <id>check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>validate</phase>
                     </execution>
                 </executions>
             </plugin>
