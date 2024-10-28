@@ -4,7 +4,7 @@
 
     <groupId>io.github.matheusmfranco</groupId>
     <artifactId>LuckyGuy4J</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -270,7 +270,6 @@
         <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
         <connection>scm:git:git://github.com/MatheusMFranco/lucky-guy-4j.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MatheusMFranco/lucky-guy-4j.git</developerConnection>
-    <tag>v1.0.2</tag>
   </scm>
 
     <licenses>
