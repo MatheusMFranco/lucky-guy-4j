@@ -1,11 +1,11 @@
-name: CI/CD for LuckyGuy4J
+name: Publish to MVN
 
 on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
@@ -24,7 +24,15 @@ jobs:
       - name: Run Tests
         run: mvn test
 
-      - name: Publish package
+      - name: Publish Package
         run: mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
+
+      - name: Create Git Tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
