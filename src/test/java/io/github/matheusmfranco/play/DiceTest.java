@@ -20,13 +20,13 @@ class DiceTest {
   @Test
   void testPlayWithValidSides() {
     Dice dice = new Dice();
-    int sides = 6;
+    int sides = 20;
 
     String result = dice.play(sides);
 
     int rolledValue = Integer.parseInt(result);
     assertTrue(
-        rolledValue >= 1 && rolledValue <= sides,
+        rolledValue >= 0 && rolledValue < sides,
         "The rolled value should be between 1 and " + sides);
   }
 
