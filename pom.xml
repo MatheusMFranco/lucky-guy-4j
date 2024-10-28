@@ -178,9 +178,18 @@
                 <version>2.25</version>
                 <executions>
                     <execution>
+                        <id>format</id>
                         <goals>
                             <goal>format</goal>
                         </goals>
+                        <phase>validate</phase>
+                    </execution>
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>validate</phase>
                     </execution>
                 </executions>
             </plugin>
@@ -256,8 +265,7 @@
         <url>https://github.com/MatheusMFranco/lucky-guy-4j</url>
         <connection>scm:git:git://github.com/MatheusMFranco/lucky-guy-4j.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/MatheusMFranco/lucky-guy-4j.git</developerConnection>
-      <tag>LuckyGuy4J-1.0.1</tag>
-  </scm>
+    </scm>
 
     <licenses>
         <license>

@@ -1,0 +1,64 @@
+name: Publish to MVN
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up System
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ca-certificates
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '22'
+          distribution: 'adopt'
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: Run Tests
+        run: mvn test
+
+      - name: Check code formatting
+        run: mvn fmt:check
+
+      - name: Publish to Maven Central
+        if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, '[release]')
+        env:
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          mvn release:prepare -DreleaseVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/-SNAPSHOT//') -DdevelopmentVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/[0-9]$/&1-SNAPSHOT/')
+          mvn release:perform
+
+      - name: Configure Git user
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create Git Tag
+        if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, '[release]')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
