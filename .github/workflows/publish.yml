@@ -30,14 +30,6 @@ jobs:
           java-version: '22'
           distribution: 'adopt'
 
-      - name: Import GPG Key
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: |
-          echo "$GPG_PRIVATE_KEY" | base64 --decode | gpg --batch --import
-          echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback --import-options import-show
-
       - name: Build with Maven
         run: mvn clean package
 
