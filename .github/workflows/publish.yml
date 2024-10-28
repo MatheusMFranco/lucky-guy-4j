@@ -28,10 +28,10 @@ jobs:
       - name: Import GPG Key
         env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
+          mkdir -p ~/.gnupg
+          chmod 700 ~/.gnupg
           echo "$GPG_PRIVATE_KEY" | base64 --decode | gpg --batch --import
-          echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback --import-options import-show
 
       - name: Build with Maven
         run: mvn clean package
@@ -49,8 +49,10 @@ jobs:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
-          mvn release:prepare -DreleaseVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/-SNAPSHOT//') -DdevelopmentVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/[0-9]$/&1-SNAPSHOT/')
-          mvn release:perform
+          RELEASE_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/-SNAPSHOT//')
+          DEVELOPMENT_VERSION=$(echo "$RELEASE_VERSION" | awk -F. -v OFS=. '{$NF+=1; print $0 "-SNAPSHOT"}')
+          mvn release:prepare -DreleaseVersion=$RELEASE_VERSION -DdevelopmentVersion=$DEVELOPMENT_VERSION -Darguments="-Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}"
+          mvn release:perform -Darguments="-Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}"
 
       - name: Configure Git user
         run: |
