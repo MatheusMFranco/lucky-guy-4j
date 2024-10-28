@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -30,13 +33,16 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Run Tests
-        run: mvn test
-
       - name: Check code formatting
+        if: github.event_name == 'pull_request'
         run: mvn fmt:check
 
+      - name: Run Tests
+        if: github.event_name == 'pull_request'
+        run: mvn test
+
       - name: Publish to Maven Central
+        if: github.event_name == 'push'
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -46,14 +52,16 @@ jobs:
           MAVEN_GPG_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         run: |
           mvn release:prepare -DreleaseVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/-SNAPSHOT//') -DdevelopmentVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout | sed 's/[0-9]$/&1-SNAPSHOT/')
-          mvn release:perform
+          mvn release:perform -DskipTests
 
       - name: Configure Git user
+        if: github.event_name == 'push'
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create Git Tag
+        if: github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
