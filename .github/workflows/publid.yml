@@ -31,6 +31,10 @@ jobs:
       - name: Run Tests
         run: mvn test
 
+      - name: Publish Package
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: mvn deploy -DskipTests
+
       - name: Create Git Tag
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |

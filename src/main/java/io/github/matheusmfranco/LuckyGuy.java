@@ -20,7 +20,7 @@ public class LuckyGuy {
 
   private Locale language;
 
-  LuckyGuy() {
+  public LuckyGuy() {
     language = Locale.ENGLISH;
   }
 

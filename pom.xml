@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.matheusmfranco</groupId>
-    <artifactId>LuckyGuy4J</artifactId>
-    <version>1.0.3</version>
+    <artifactId>luckyguy4j</artifactId>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -162,7 +162,7 @@
         <repository>
             <id>github</id>
             <name>GitHub MatheusMFranco Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/MatheusMFranco/lucky-guy-4j</url>
+            <url>https://maven.pkg.github.com/matheusmfranco/lucky-guy-4j</url>
         </repository>
     </distributionManagement>
 </project>
