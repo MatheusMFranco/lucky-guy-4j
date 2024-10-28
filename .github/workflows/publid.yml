@@ -27,7 +27,7 @@ jobs:
       - name: Publish Package
         run: mvn --batch-mode deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Git Tag
         env:
