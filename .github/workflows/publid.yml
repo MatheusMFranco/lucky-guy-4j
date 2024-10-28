@@ -33,7 +33,7 @@ jobs:
 
       - name: Publish Package
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: mvn deploy
+        run: mvn deploy -DskipTests
 
       - name: Create Git Tag
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
