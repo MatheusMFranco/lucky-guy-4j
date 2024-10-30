@@ -3,7 +3,7 @@
 
 # Lucky Guy for Java!
 [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.matheusmfranco/LuckyGuy4J/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.matheusmfranco/LuckyGuy4J)
+![Maven Central Version](https://img.shields.io/maven-central/v/io.github.matheusmfranco/LuckyGuy4J)
 
 
 LuckyGuy4J is a game utility library that includes features such as rolling dice, flipping coins, binary outcomes, custom games, and more.
